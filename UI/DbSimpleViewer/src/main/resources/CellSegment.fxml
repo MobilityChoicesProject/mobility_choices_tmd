@@ -1,0 +1,19 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="containerId" >
+
+    <HBox>
+
+        <VBox>
+            <Label fx:id="startTimeLabel"></Label>
+            <Label fx:id="endTimeLabel"></Label>
+        </VBox>
+        <VBox>
+        <Label fx:id="transportationMode"></Label>
+        <Label fx:id="durationLabel"></Label>
+        </VBox>
+    </HBox>
+<Label fx:id="originLabel"></Label>
+
+</VBox>

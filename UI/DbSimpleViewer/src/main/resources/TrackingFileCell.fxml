@@ -1,0 +1,28 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="containerId" >
+
+<BorderPane>
+    <BorderPane.margin>
+        <Insets bottom="0" left="0" right="20" top="0" />
+    </BorderPane.margin>
+    <left>
+        <VBox>
+
+            <Label fx:id="dateTime"></Label>
+            <Label fx:id="transportations"></Label>
+
+        </VBox>
+    </left>
+    <right>
+
+        <Label fx:id="editedLabel" ></Label>
+
+    </right>
+
+
+</BorderPane>
+
+</VBox>

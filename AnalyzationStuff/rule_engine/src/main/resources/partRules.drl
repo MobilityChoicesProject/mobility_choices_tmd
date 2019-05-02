@@ -1,0 +1,68 @@
+import at.fhv.transportdetector.trackingtypes.features.FeatureResult;
+import at.fhv.tmd.drools.*
+import at.fhv.transportdetector.trackingtypes.TransportType;
+import static TransportType;
+rule "averageDistanceToClosePoints"
+    when
+      $m1 : FeatureElement(name=="averageDistanceToClosePoints");
+    then
+      $m1.getTrackingElement().add(TransportType.OTHER,MemberFunctions.pieceWiseLinear(0,0.04,1,0,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.TRAIN,MemberFunctions.pieceWiseLinear(0.145,0.180,0,1,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BUS,MemberFunctions.trapezoid(0.05, 0.53,0.18,0.188,0, 1 ,$m1.getValue()));
+end
+
+rule "median_speed"
+    when
+      $m1 : FeatureElement(name =="median_speed");
+    then
+      $m1.getTrackingElement().add(TransportType.OTHER,MemberFunctions.pieceWiseLinear(5.2328594,6.2797814, 1, 0 ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BIKE,MemberFunctions.trapezoid(9,11.894,17.683,20.578, 0, 1,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BUS,MemberFunctions.trapezoid( 11.226,17.778,30.882,37.434, 0, 1 ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.TRAIN,MemberFunctions.trapezoid(35.632,45.363,64.826,74.557, 0, 1,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.CAR,MemberFunctions.trapezoid( 19.101,32.133,58.196,71.228, 0, 1  ,$m1.getValue()));
+end
+
+
+rule "95_speed_percentil"
+    when
+      $m1 : FeatureElement(name =="95_speed_percentil");
+    then
+      $m1.getTrackingElement().add(TransportType.OTHER,MemberFunctions.pieceWiseLinear(  10.591,14.273, 1, 0   ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BIKE,MemberFunctions.trapezoid(13.954,18.136,26.500,30.682, 0, 1    ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BUS,MemberFunctions.trapezoid( 36.889,46.543,65.849,75.502, 0, 1   ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.TRAIN,MemberFunctions.trapezoid(75.315,104.561,163.053,192.299, 0, 1 ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.CAR,MemberFunctions.trapezoid( 39.214,58.716,97.720,117.222, 0, 1   ,$m1.getValue()));
+end
+
+
+rule "average_rail_route_distance"
+    when
+      $fE : FeatureElement(name =="average_rail_route_distance");
+    then
+      $fE.getTrackingElement().add(TransportType.TRAIN,MemberFunctions.pieceWiseLinear(0.102,0.160, 1, 0   ,$fE.getValue()),7);
+ end
+
+rule "average_bus_route_distance"
+    when
+      $m1 : FeatureElement(name =="average_bus_route_distance");
+    then
+      $m1.getTrackingElement().add(TransportType.BUS,MemberFunctions.pieceWiseLinear( 0.0152293,0.025, 1, 0 ,$m1.getValue()),7);
+end
+
+rule "average_bus_endpoint_distance"
+    when
+      $m1 : FeatureElement(name =="average_bus_endpoint_distance");
+    then
+      $m1.getTrackingElement().add(TransportType.BUS,MemberFunctions.pieceWiseLinear( 0.0282362,0.0382322, 1, 0  ,$m1.getValue()),2);
+end
+
+rule "speed_variance"
+    when
+      $m1 : FeatureElement(name =="speed_variance");
+    then
+      $m1.getTrackingElement().add(TransportType.OTHER,MemberFunctions.pieceWiseLinear( 12,86, 1, 0   ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BIKE,MemberFunctions.trapezoid(11,13,70,80, 0, 1,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.BUS,MemberFunctions.trapezoid(80,90, 600,700,0, 1 ,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.TRAIN,MemberFunctions.trapezoid(600,700,150000,170000, 0, 1,$m1.getValue()));
+      $m1.getTrackingElement().add(TransportType.CAR,MemberFunctions.trapezoid( 75,80,1800,1900, 0, 1  ,$m1.getValue()));
+end

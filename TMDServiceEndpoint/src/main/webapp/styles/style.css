@@ -1,0 +1,69 @@
+* {
+  font-family: sans-serif;
+  padding: 9px;
+  color: gray;
+}
+body{
+  background-color: ghostwhite;
+}
+#inputForm{
+  position:relative;
+  margin: 0 auto 0px;
+}
+
+#container{
+  width: 400px;
+  margin:auto;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+}
+
+label{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.inputPair{
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 15px;
+}
+
+.inputContainer{
+  display:flex;
+  padding: 0px;
+}
+
+.inputBox{
+  padding: 0px;
+  margin: 0px;
+  width: auto;
+}
+.errorBox{
+  flex-grow: 1;
+  margin: auto;
+  display: none;
+}
+
+.errorBox > label{
+  color: crimson;
+}
+
+body > header {
+  background-color: darkblue;
+  border-radius: 10px;
+  box-shadow: 5px 5px 9px gray;
+}
+a {color: white;
+  text-decoration: none;
+}
+a:hover, .title {
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+input:not([type='image']), textarea {
+  width: 200px;
+}
+

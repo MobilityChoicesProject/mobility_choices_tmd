@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>at.fhv.tmd</groupId>
+    <artifactId>gis</artifactId>
+    <version>0.1</version>
+
+  <parent>
+    <groupId>at.fhv.tmd</groupId>
+    <artifactId>whole-project</artifactId>
+    <version>0.1</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.10.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-spatial</artifactId>
+      <version>5.2.10.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.42</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>trackingDataTypes</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>common</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+
+  </dependencies>
+
+</project>

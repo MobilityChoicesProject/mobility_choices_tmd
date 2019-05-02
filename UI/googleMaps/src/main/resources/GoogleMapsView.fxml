@@ -1,0 +1,21 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.web.WebView?>
+<BorderPane fx:controller="at.fhv.jn.googleMaps.GoogleMapsController"
+            xmlns:fx="http://javafx.com/fxml" minWidth="200" minHeight="200">
+
+    <center>
+    <WebView fx:id="webViewId" >
+    </WebView>
+    </center>
+<!--<right>-->
+    <!--<VBox>-->
+        <!--<Button text="button1" fx:id="button1"> </Button>-->
+        <!--<Button text="button2" fx:id="button2"> </Button>-->
+        <!--<Button text="show" fx:id="button3"> </Button>-->
+        <!--<Button text="hide" fx:id="button4"> </Button>-->
+        <!--<Button text="show" fx:id="button5"> </Button>-->
+        <!--<Button text="Dispose" fx:id="button6"> </Button>-->
+        <!--<Button text="drag" fx:id="button7"> </Button>-->
+    <!--</VBox>-->
+<!--</right>-->
+</BorderPane>

@@ -1,0 +1,21 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="containerId" >
+
+  <BorderPane>
+      <left>
+          <Label fx:id="leftLabel"></Label>
+
+      </left>
+      <right>
+          <Label fx:id="rightLabel"></Label>
+      </right>
+
+
+  </BorderPane>
+
+
+
+
+</VBox>

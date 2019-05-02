@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Control</title>
+  <link href="styles/controlStyle.css" rel="stylesheet">
+  <link href="styles/TooltipStyles.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="Scripts/jquery-1.11.1.min.js"></script>
+  <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+  <script src="Scripts/Config.js"></script>
+  <script src="Scripts/Util.js"></script>
+  <script src="Scripts/GisConfigScripts.js"></script>
+
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+
+
+</head>
+<body onload="testIfTokenIsValid()">
+<div id="container">
+  <div id="inputForm">
+    <div class="group">
+      <H1>TMD-Service</H1>
+    </div>
+    <div class="group">
+      <button type="submit" class="menuButton" onclick="showChangeParameters()">Change Parameters</button>
+    </div>
+
+    <div class="group">
+      <button type="submit" class="menuButton" onclick="showChangePassword()" >Change Password</button>
+    </div>
+
+    <div class="group">
+      <button type="submit" class="menuButton" onclick="showGisCacheConfig()" >GIS Cache</button>
+    </div>
+
+    <div class="group" id="hiddenGroupId">
+    </div>
+
+    <div class="group" id="logoutGroupId">
+      <button type="submit" class="menuButton" id="logoutButton" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+
+</div>
+</div>
+<div id="container2">
+
+  <div id="passwordContainer">
+    <!--<div class="inputPair">-->
+    <!--<label>Username</label><br>-->
+    <!--<input type="text" id="usernameId" placeholder="Enter Username" name="uname" required>-->
+    <!--</div>-->
+
+    <div class="inputPair">
+      <label>Old Password</label>
+      <input type="password" id="oldPasswordId" placeholder="Enter Old Password" name="psw" required>
+    </div>
+
+    <div class="inputPair">
+      <label>New Password</label>
+      <input type="password" id="newPasswordId1" placeholder="Enter New Password" name="psw" required>
+    </div>
+
+    <div class="inputPair">
+      <label>New Password</label>
+      <input type="password" id="newPasswordId2" placeholder="Enter New Password" name="psw" required>
+    </div>
+
+    <div class="inputContainer">
+
+      <div class="inputBox">
+        <button type="submit" onclick="changePwd()">Change</button>
+      </div>
+      <div class="errorBox"><label>failed</label></div>
+    </div>
+
+  </div>
+
+  <div id="configContainer">
+
+    <div id="configItems">
+
+    </div>
+
+    <div class="inputContainer">
+
+      <div class="group">
+        <button type="submit" onclick="useDefaultForAll()" >Load Defaults</button>
+      </div>
+      <div class="group" id="hiddenGroupId1">
+      </div>
+      <div class="group">
+        <div style="padding: 0px;">
+          <button type="submit" onclick="saveNewSettings()">Save</button>
+        </div>
+        <div class="group" style="display: none;" id="loginError"><label>saving failed</label></div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div id="gisContainer">
+
+    <div id="progressbar"></div>
+
+    <div class="inputContainer">
+      <div class="group">
+        <button id="gisConfig_startButtonId" type="submit" onclick="startGisCacheUpdate()" class=" ui-btn ui-shadow ui-corner-all">Start</button>
+        <div id="gisConfig_startButtonId_Disabled"   class="ui-shadow ui-corner-all">Start</div>
+      </div>
+      <div class="group">
+        <button id="gisConfig_cancelButtonId" type="submit" onclick="stopGisCacheUpdate()" class=" ui-btn ui-shadow ui-corner-all">Cancel</button>
+        <div id="gisConfig_cancelButtonId_Disabled"   class="ui-shadow ui-corner-all">Cancel</div>
+      </div>
+    </div>
+
+
+    Last Updates:
+    <table id="gisConfigTable">
+    </table>
+
+
+  </div>
+
+
+
+
+</div>
+
+
+
+</body>
+
+</body>
+</html>

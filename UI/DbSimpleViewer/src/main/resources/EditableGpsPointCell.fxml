@@ -1,0 +1,59 @@
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="containerId" >
+
+    <BorderPane>
+        <left>
+            <HBox fx:id="innerContainer">
+
+
+                <Label  fx:id="index" >
+                </Label>
+
+                <VBox>
+                    <HBox>
+                        <Label fx:id="dateTime"></Label>
+                        <Label fx:id="runningTime"></Label>
+                    </HBox>
+
+                    <Label fx:id="transportType"></Label>
+                </VBox>
+
+                <VBox>
+                    <HBox>
+                        <Label fx:id="accuracy"></Label>
+                    </HBox>
+
+                    <Label fx:id="speed"></Label>
+                </VBox>
+
+
+            </HBox>
+        </left>
+
+        <right>
+            <ComboBox fx:id="comboBox">
+                <!--<items>-->
+                    <!--<FXCollections fx:factory="observableArrayList">-->
+                        <!--<String fx:value="" />-->
+                        <!--<String fx:value="Car" />-->
+                        <!--<String fx:value="Bike" />-->
+                        <!--<String fx:value="Bus" />-->
+                        <!--<String fx:value="Train" />-->
+                        <!--<String fx:value="Walking" />-->
+                        <!--<String fx:value="Other" />-->
+                    <!--</FXCollections>-->
+                <!--</items>-->
+            </ComboBox>
+        </right>
+
+    </BorderPane>
+
+
+
+
+
+</VBox>

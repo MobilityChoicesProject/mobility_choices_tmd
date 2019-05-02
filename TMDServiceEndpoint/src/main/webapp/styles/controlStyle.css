@@ -1,0 +1,141 @@
+* {
+  font-family: sans-serif;
+  padding: 9px;
+  color: gray;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body{
+  background-color: ghostwhite;
+}
+#inputForm{
+  display: flex;
+  position:relative;
+  margin: 0 auto 0px;
+}
+
+div#hiddenGroupId {
+  flex-grow: 1;
+}
+
+div#hiddenGroupId1 {
+  flex-grow: 1;
+}
+
+.group{
+  height: 60px;
+  text-align: start;
+
+}
+
+.menuButton{
+  height: 100%;
+}
+
+#container{
+  width: 800px;
+  margin:auto;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+}
+
+#container2{
+
+  width:800px;
+  margin:auto;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: none;
+}
+
+label{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+
+.inputBox{
+  padding: 0px;
+  margin: 0px;
+  width: auto;
+}
+.errorBox{
+  flex-grow: 1;
+  margin: auto;
+  display: none;
+}
+
+.errorBox > label{
+  color: crimson;
+}
+
+body > header {
+  background-color: darkblue;
+  border-radius: 10px;
+  box-shadow: 5px 5px 9px gray;
+}
+a {color: white;
+  text-decoration: none;
+}
+a:hover, .title {
+  color: white;
+  text-shadow: 0 0 10px white, 0 0 20px white;
+}
+
+
+.inputContainer{
+  display: flex;
+  position:relative;
+}
+
+
+.configInputClass{
+  width:150px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0px;
+}
+
+
+.ui-progressbar {
+  position: relative;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  height: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+.ui-progressbar .ui-progressbar-value{
+  padding: 0px;
+  height: 28px;
+}
+
+.resumeButton{
+  height: 30px;
+  padding: 2px;
+}
+
+
+#gisConfig_startButtonId_Disabled{
+  margin: .5em 0;
+  padding: .7em 1em;}
+
+#gisConfig_cancelButtonId_Disabled{
+  margin: .5em 0;
+  padding: .7em 1em;
+}
+
+.ui-btn{
+  font-size: 14px !important;
+}
+
+

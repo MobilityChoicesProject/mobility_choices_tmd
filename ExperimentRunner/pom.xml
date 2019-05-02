@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>at.fhv.tmd</groupId>
+    <artifactId>experimentRunner</artifactId>
+    <version>0.1</version>
+
+    <properties>
+        <kotlin.version>1.2.21</kotlin.version>
+    </properties>
+
+    <parent>
+    <groupId>at.fhv.tmd</groupId>
+    <artifactId>whole-project</artifactId>
+    <version>0.1</version>
+  </parent>
+
+  <dependencies>
+
+      <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>gis</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>rule_engine</artifactId>
+      <version>0.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-jdk14</artifactId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
+
+
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>segmentClassification</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>mainServer</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>dal</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>at.fhv.tmd</groupId>
+      <artifactId>segmentSplitting</artifactId>
+      <version>0.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.10.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-spatial</artifactId>
+      <version>5.2.10.Final</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-simple</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlin</groupId>
+          <artifactId>kotlin-stdlib-jdk8</artifactId>
+          <version>${kotlin.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlin</groupId>
+          <artifactId>kotlin-test</artifactId>
+          <version>${kotlin.version}</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.jetbrains.kotlin</groupId>
+          <artifactId>kotlin-stdlib-jdk8</artifactId>
+          <version>${kotlin.version}</version>
+      </dependency>
+  </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
+                <executions>
+                    <execution>
+                        <id>compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>test-compile</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>test-compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <jvmTarget>1.8</jvmTarget>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

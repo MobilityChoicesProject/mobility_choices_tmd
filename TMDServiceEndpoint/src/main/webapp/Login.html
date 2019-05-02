@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="styles/style.css" rel="stylesheet">
+  <script src="Scripts/jquery-3.2.1.min.js"></script>
+  <script src="Scripts/Login.js"></script>
+  <script src="Scripts/Util.js"></script>
+  <script>
+    $(document).ready(function(){ initLogin()});
+  </script>
+</head>
+<body>
+
+
+<div id="container">
+  <H1>Login TMD-Service</H1>
+
+
+  <div id="inputForm">
+
+
+    <div class="inputPair">
+      <label>Username</label><br>
+      <input id="userInput" type="text" placeholder="Enter Username" name="uname" required>
+    </div>
+
+    <div class="inputPair">
+      <label>Password</label><br>
+      <input id="passwordInput" type="password" placeholder="Enter Password" name="psw" required>
+    </div>
+
+    <div class="inputContainer">
+
+      <div class="inputBox">
+        <button type="submit" id="loginButton">Login</button>
+      </div>
+      <div class="errorBox" id="loginError"><label>login failed</label></div>
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+</body>
+
+</body>
+</html>
